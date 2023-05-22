@@ -273,7 +273,7 @@ class _UpdatWidgetState extends State<UpdatWidget> {
     }
     // Open the file.
     try {
-      await openInstaller(installerFile!);
+      await openInstaller(installerFile!, widget.appName);
       if (widget.closeOnInstall) exit(0);
     } catch (e) {
       print(e);
